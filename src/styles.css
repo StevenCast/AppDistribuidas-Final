@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+.image-container {
+  text-align: center; /* Centrar la imagen */
+  margin-top: 20px;
+}
+
+.astro-image {
+  width: 80%; /* Ajusta el tamaño relativo a la pantalla */
+  max-width: 500px; /* Tamaño máximo para que no sea muy grande */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+/* Hero Section */
+.hero {
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Content Section */
+.content {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #00d4ff;
+}
+
+.content ul {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cta .btn-desliza {
+  display: inline-block;
+  background-color: #00d4ff;
+  color: #020024;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta .btn-desliza:hover {
+  background-color: #ffffff;
+  color: #090979;
+  transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .content h2 {
+      font-size: 1.5rem;
+  }
+
+  .cta .btn-desliza {
+      font-size: 1rem;
+      padding: 8px 16px;
+  }
+}
+
+/* Formulario */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botón de enviar */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #00d4ff;
+  color: #020024;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #ffffff;
+  color: #090979;
+  transform: scale(1.05);
+}
+
+/* Contenedor principal para dividir en dos columnas */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* Sección de información (izquierda) */
+.text-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+/* Sección del formulario (derecha) */
+.form-container {
+  flex: 0.5; /* Menos espacio que el contenido */
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo: en pantallas pequeñas, los elementos se apilan */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .text-content, .form-container {
+      width: 100%;
+      max-width: 600px;
+  }
+}
